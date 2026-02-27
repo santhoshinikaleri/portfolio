@@ -1,0 +1,32 @@
+# Git Ignore File
+# Files and folders to exclude from version control
+
+# System Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE/Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Build/Distribution
+dist/
+build/
+node_modules/
+
+# OS
+.Windows/
+.Linux/
