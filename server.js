@@ -38,6 +38,16 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// ===== SERVE STATIC FILES =====
+// Serve frontend files (HTML, CSS, JS)
+app.use(express.static('.'));
+app.use(express.static('./public'));
+
+// Root path serves index.html
+app.get('/', (req, res) => {
+  res.sendFile(new URL('../index.html', import.meta.url).pathname);
+});
+
 // ===== LOGGING MIDDLEWARE =====
 app.use((req, res, next) => {
   const timestamp = new Date().toISOString();
